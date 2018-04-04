@@ -17,6 +17,10 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
+window.Vue = require('vue');
+var Vue = require('vue');
+Vue.use(require('vue-resource'));
+
 const app = new Vue({
     el: '#app'
 });
