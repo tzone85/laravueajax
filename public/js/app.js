@@ -44970,8 +44970,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            customers: [{ name: 'Mncedi Mini', email: 'mncedi@thandotec.co.za' }, { name: 'Thando Mqwathi', email: 'thando@thandotec.co.za' }]
+            customers: []
         };
+    },
+    create: function create() {
+        this.fetchCustomer();
+    },
+
+
+    methods: {
+        fetchCustomer: function fetchCustomer() {
+            var _this = this;
+
+            this.$http.get("customer").then(function (response) {
+                _this.customers = response.data.customers;
+            });
+        }
     }
 });
 

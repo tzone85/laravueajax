@@ -20,10 +20,17 @@
     export default {
         data(){
             return {
-                customers: [
-                    {name: 'Mncedi Mini', email: 'mncedi@thandotec.co.za'},
-                    {name: 'Thando Mqwathi', email: 'thando@thandotec.co.za'}
-                ],
+                customers: [],
+            }
+        },
+
+        create (){
+            this.fetchCustomer();
+        },
+
+        methods:{
+            fetchCustomer(){
+                this.$http.get("customer").then(response => { this.customers = response.data.customers});
             }
         }
     }
