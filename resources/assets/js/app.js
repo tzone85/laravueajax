@@ -23,7 +23,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 
 // Vue.component('customer', require('./components/Customers.vue'));  // this works
 
-// another way of doing the same thing:
+// sanetizing the content in the 'content' section of the pages.
+Vue.$http.headers.common['X-CSRF-TOKEN'] = $('meta[name = "csrf-token"]').attr('content');
+
+// another way of doing the same thing as above initial example:
 
 import customer from './components/Customers.vue';
 
