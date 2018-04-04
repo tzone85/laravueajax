@@ -21,11 +21,11 @@ Vue.use(require('vue-resource'));
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-// Vue.component('customer', require('./components/Customer.vue'));  // this works
+// Vue.component('customer', require('./components/Customers.vue'));  // this works
 
 // another way of doing the same thing:
 
-import customer from './components/Customer.vue';
+import customer from './components/Customers.vue';
 
 const app = new Vue({
     el: '#app',

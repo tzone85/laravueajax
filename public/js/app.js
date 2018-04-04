@@ -11938,8 +11938,8 @@ module.exports = __webpack_require__(44);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Customer_vue__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Customer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Customer_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Customers_vue__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Customers_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Customers_vue__);
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -11963,7 +11963,7 @@ Vue.use(__webpack_require__(42));
 
 Vue.component('example-component', __webpack_require__(38));
 
-// Vue.component('customer', require('./components/Customer.vue'));  // this works
+// Vue.component('customer', require('./components/Customers.vue'));  // this works
 
 // another way of doing the same thing:
 
@@ -11972,7 +11972,7 @@ Vue.component('example-component', __webpack_require__(38));
 var app = new Vue({
   el: '#app',
 
-  components: { customer: __WEBPACK_IMPORTED_MODULE_0__components_Customer_vue___default.a }
+  components: { customer: __WEBPACK_IMPORTED_MODULE_0__components_Customers_vue___default.a }
 });
 
 /***/ }),
@@ -44890,15 +44890,18 @@ if (typeof window !== 'undefined' && window.Vue) {
 /* 52 */,
 /* 53 */,
 /* 54 */,
-/* 55 */
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(39)
 /* script */
-var __vue_script__ = __webpack_require__(56)
+var __vue_script__ = __webpack_require__(59)
 /* template */
-var __vue_template__ = __webpack_require__(57)
+var __vue_template__ = __webpack_require__(60)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -44915,7 +44918,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/Customer.vue"
+Component.options.__file = "resources/assets/js/components/Customers.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -44924,9 +44927,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1f2eda15", Component.options)
+    hotAPI.createRecord("data-v-6b4feca4", Component.options)
   } else {
-    hotAPI.reload("data-v-1f2eda15", Component.options)
+    hotAPI.reload("data-v-6b4feca4", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -44937,7 +44940,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 56 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -44946,30 +44949,76 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('Component mounted.');
+    data: function data() {
+        return {
+            customers: [{ name: 'Mncedi Mini', email: 'mncedi@thandotec.co.za' }, { name: 'Thando Mqwathi', email: 'thando@thandotec.co.za' }]
+        };
     }
 });
 
 /***/ }),
-/* 57 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("Hi Customer")])
+  return _c(
+    "table",
+    { staticClass: "table table-bordered table-striped table-condensed" },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "tbody",
+        _vm._l(_vm.customers, function(customer) {
+          return _c("tr", [
+            _c("td", [_vm._v(_vm._s(customer.name))]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(customer.email))])
+          ])
+        })
+      )
+    ]
+  )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Name")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Email")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-1f2eda15", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-6b4feca4", module.exports)
   }
 }
 

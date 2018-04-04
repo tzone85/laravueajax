@@ -1,0 +1,30 @@
+<template>
+    <table class="table table-bordered table-striped table-condensed">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr v-for="customer in customers">
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+</template>
+
+<script>
+    export default {
+        data(){
+            return {
+                customers: [
+                    {name: 'Mncedi Mini', email: 'mncedi@thandotec.co.za'},
+                    {name: 'Thando Mqwathi', email: 'thando@thandotec.co.za'}
+                ],
+            }
+        }
+    }
+</script>
